@@ -50,10 +50,27 @@ def shutter_quiz():
 
 
 
-@app.route('/aperture')
-def aperture():
-    # Render a template for the Aperture section
-    return render_template('aperture.html')
+
+
+@app.route('/aperture_1')
+def aperture_1():
+    return render_template('aperture_1.html')
+
+@app.route('/aperture_2')
+def aperture_2():
+    return render_template('aperture_2.html')
+
+@app.route('/aperture_3')
+def aperture_3():
+    return render_template('aperture_3.html')
+
+@app.route('/aperture_4')
+def aperture_4():
+    return render_template('aperture_4.html')
+@app.route('/aperture_quiz')
+def aperture_quiz():
+    return render_template('aperture_quiz.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
