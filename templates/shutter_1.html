@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}Shutter Speed Part 1{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <!-- Left column for text content -->
+        <div class="col-md-6">
+            <h1>What is Shutter Speed?</h1>
+            <p>Shutter speed is the length of time the camera shutter is open, exposing light onto the camera sensor. Essentially, it’s how long your camera spends taking a photo. This has a few important effects on how your images will appear.</p>
+            <p>When you use a long shutter speed (also known as a “slow” shutter speed), you end up exposing your sensor for a significant period of time. The first big effect of it is motion blur. If your shutter speed is long, moving subjects in your photo will appear blurred along the direction of motion.</p>
+            
+            <!-- Include navigation buttons -->
+            <div class="mt-4">
+                <a href="{{ url_for('shutter_2') }}" class="btn btn-primary">Next Lesson</a>
+            </div>
+        </div>
+
+        <!-- Right column for image -->
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/Shutter1.png') }}" alt="Shutter Speed Example" class="img-fluid">
+        </div>
+    </div>
+</div>
+{% endblock %}

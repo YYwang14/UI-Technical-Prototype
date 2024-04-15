@@ -24,10 +24,31 @@ def iso_quiz():
     return render_template('iso_quiz.html')
 
 
-@app.route('/shutter_speed')
-def shutter_speed():
-    # Render a template for the Shutter Speed section
-    return render_template('shutter_speed.html')
+@app.route('/shutter_1')
+def shutter_1():
+    return render_template('shutter_1.html')
+
+@app.route('/shutter_2')
+def shutter_2():
+    return render_template('shutter_2.html')
+
+@app.route('/shutter_3')
+def shutter_3():
+    return render_template('shutter_3.html')
+
+@app.route('/shutter_4')
+def shutter_4():
+    return render_template('shutter_4.html')
+
+@app.route('/shutter_5')
+def shutter_5():
+    return render_template('shutter_5.html')
+
+@app.route('/shutter_quiz')
+def shutter_quiz():
+    return render_template('shutter_quiz.html')
+
+
 
 @app.route('/aperture')
 def aperture():
