@@ -6,10 +6,23 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/iso')
-def iso():
-    # Render a template for the ISO section
-    return render_template('iso.html')
+
+@app.route('/iso1')
+def iso1():
+    return render_template('iso1.html')
+
+@app.route('/iso2')
+def iso2():
+    return render_template('iso2.html')
+
+@app.route('/iso3')
+def iso3():
+    return render_template('iso3.html')
+
+@app.route('/iso_quiz')
+def iso_quiz():
+    return render_template('iso_quiz.html')
+
 
 @app.route('/shutter_speed')
 def shutter_speed():
