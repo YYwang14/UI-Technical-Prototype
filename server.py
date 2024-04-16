@@ -71,6 +71,20 @@ def aperture_4():
 def aperture_quiz():
     return render_template('aperture_quiz.html')
 
+@app.route('/quiz_1')
+def quiz_1():
+    return render_template('quiz_1.html')
+@app.route('/quiz_2')
+def quiz_2():
+    return render_template('quiz_2.html')
+@app.route('/quiz_3')
+def quiz_3():
+    return render_template('quiz_3.html')
+@app.route('/results_1')
+def results_1():
+    return render_template('results_1.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
