@@ -1,0 +1,11 @@
+.drop-box {
+    border: 2px dashed gray;
+    height: 50px; /* Set an appropriate height */
+    margin-top: 5px;
+    position: relative;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+.clear-btn {
+    margin-top: 5px;
+}
