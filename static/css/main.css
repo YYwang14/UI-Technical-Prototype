@@ -1,0 +1,87 @@
+.drop-box {
+    border: 2px dashed gray;
+    height: 50px; /* Set an appropriate height */
+    margin-top: 5px;
+    position: relative;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+.clear-btn {
+    margin-top: 5px;
+}
+
+.container {
+    max-width: 800px; /* Adjust based on your design preferences */
+    margin: auto;
+    padding: 20px;
+}
+
+.slider {
+    width: 90%; /* Make the slider span the full width of its container */
+    margin-top: 20px; /* Space between the image and the slider */
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.slider-labels span {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn {
+    margin: 15px 5px; /* Provides spacing between buttons */
+}
+
+#result {
+    color: green; /* Default color for messages */
+    margin-top: 10px;
+}
+
+.camera-setup {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-zone {
+    border: 2px dashed gray;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #f0f0f0;
+}
+
+#shutterSpeedZone {
+    top: 20px; /* Adjust these values based on the image layout */
+    left: 20px;
+}
+
+#apertureZone {
+    top: 20px;
+    left: 140px;
+}
+
+#isoZone {
+    top: 20px;
+    left: 260px;
+}
+
+.draggable {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.btn {
+    margin: 10px;
+}
+
+#result {
+    color: green;
+    margin-top: 10px;
+}

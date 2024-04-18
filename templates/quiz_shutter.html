@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Shutter Speed Quiz{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<script src="{{ url_for('static', filename='js/quiz_shutter.js') }}"></script>
+<div class="container text-center">
+    <h1>You're photographing a session outdoors on a cloudy day, and you want to ensure a sharp, moderately lit picture. Which shutter speed setting should you choose?</h1>
+    <img id="shutterImage" src="{{ url_for('static', filename='images/quiz2_60.png') }}" style="width:100%; max-width: 600px;">
+    <div>
+        <input type="range" min="0" max="5" step="1" class="slider" id="shutterSlider">
+        <div class="slider-labels">
+            <span>1/60</span>
+            <span>1/125</span>
+            <span>1/250</span>
+            <span>1/500</span>
+            <span>1/1000</span>
+            <span>1/2000</span>
+        </div>
+    </div>
+    <button id="submit" class="btn btn-success">Submit</button>
+    <a href="{{ url_for('quiz_aperture') }}" class="btn btn-primary">Next Question</a>
+    <p id="result"></p>
+</div>
+{% endblock %}

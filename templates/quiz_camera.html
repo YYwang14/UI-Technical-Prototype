@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}Camera Quiz{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<script src="{{ url_for('static', filename='js/quiz_camera.js') }}"></script>
+<div class="container text-center">
+    <h1>Find the ISO, Shutter Speed, and Aperture on the Camera!</h1>
+    <div class="camera-setup">
+        <img src="{{ url_for('static', filename='images/quiz4_camera.png') }}" alt="Camera" class="img-fluid">
+        <div class="drop-zone" id="shutterSpeedZone"></div>
+        <div class="drop-zone" id="apertureZone"></div>
+        <div class="drop-zone" id="isoZone"></div>
+    </div>
+    <div class="draggables">
+        <div draggable="true" id="shutterSpeed" class="draggable">Shutter Speed</div>
+        <div draggable="true" id="aperture" class="draggable">Aperture</div>
+        <div draggable="true" id="iso" class="draggable">ISO</div>
+    </div>
+    <button id="submit" class="btn btn-success">Submit</button>
+    <button id="reset" class="btn btn-secondary">Reset</button>
+    <p id="result"></p>
+</div>
+{% endblock %}

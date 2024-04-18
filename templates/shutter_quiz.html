@@ -2,70 +2,40 @@
 {% block title %}Shutter Quiz{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="main.css" >
-<script src="script.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<script src="{{ url_for('static', filename='js/shutter.js') }}"></script>
 <h1>Shutter Speed Section Quiz</h1>
 <div class="container">
     <div class="row">
         <!-- Image being matched on the left -->
         <div class="col-md-6">
-            <h1>Drag the shutter speeds to right picture</h1>
+            <h1>Drag the shutter speeds to the right picture</h1>
             <div id="drag-container">
-                <div class="draggable" draggable="true">Value 1</div>
-                <div class="draggable" draggable="true">Value 2</div>
-                <div class="draggable" draggable="true">Value 3</div>
-                <div class="draggable" draggable="true">Value 4</div>
-                <div class="draggable" draggable="true">Value 5</div>
-                <div class="draggable" draggable="true">Value 6</div>
-                <div class="draggable" draggable="true">Value 7</div>
-                <div class="draggable" draggable="true">Value 8</div>
-                <div class="draggable" draggable="true">Value 9</div>
+                {% for speed, image in items %}
+                <div class="draggable" draggable="true" id="shutter-{{ speed }}" data-shutter="1-{{ speed }}">1/{{ speed }}</div>
+                {% endfor %}
             </div>
         </div>
 
         <!-- Image to match on the right -->
         <div class="col-md-6">
             <h1>Fill these pictures with shutter speeds</h1>
-            <div id="drop-container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <img src="image2_1.jpg" alt="Image 2-1">
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="image2_2.jpg" alt="Image 2-2">
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="image2_3.jpg" alt="Image 2-3">
+            <div id="drop-container" class="row">
+                {% for speed, image in items %}
+                <div class="col-sm-4 mb-4">
+                    <div class="drop-slot" data-shutter="1-{{ speed }}">
+                        <img src="{{ url_for('static', filename='images/' + image) }}" alt="Shutter speed 1/{{ speed }}" class="img-fluid">
+                        <div class="drop-box"></div>
+                        <button class="btn btn-sm btn-secondary clear-btn" onclick="clearDropZone(this)">Clear</button>
+                        <p class="feedback"></p>  <!-- Result feedback for each box -->
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-sm-4">
-                        <img src="image2_4.jpg" alt="Image 2-4">
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="image2_5.jpg" alt="Image 2-5">
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="image2_6.jpg" alt="Image 2-6">
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-sm-4">
-                        <img src="image2_7.jpg" alt="Image 2-7">
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="image2_8.jpg" alt="Image 2-8">
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="image2_9.jpg" alt="Image 2-9">
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
-        </div>
     </div>
-    
-    
+    <button id="submitBtn" class="btn btn-primary">Submit</button>
+    <p id="result"></p>
     <div class="text-center mt-4">
         <a href="{{ url_for('aperture_2') }}" class="btn btn-primary">Next Lesson</a>
     </div>

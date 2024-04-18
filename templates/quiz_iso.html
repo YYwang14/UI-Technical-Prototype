@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}ISO Quiz{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<script src="{{ url_for('static', filename='js/quiz_iso.js') }}"></script>
+<div class="container text-center">
+    <h1>You're shooting a daytime nature scene and want to minimize digital noise. Which ISO setting should you choose?</h1>
+    <!-- Image directly below the question -->
+    <img id="isoImage" src="{{ url_for('static', filename='images/Quiz1_100.png') }}" style="width:100%; max-width: 600px;">
+    <!-- Slider directly below the image -->
+    <div>
+        <input type="range" min="0" max="4" step="1" class="slider" id="isoSlider">
+        <!-- Labels directly below the slider -->
+        <div class="slider-labels">
+            <span>100</span>
+            <span>200</span>
+            <span>400</span>
+            <span>800</span>
+            <span>1600</span>
+        </div>
+    </div>
+    <!-- Submit and Next Question buttons directly below the slider and labels -->
+    <div>
+        <button id="submit" class="btn btn-success">Submit</button>
+        <a href="{{ url_for('quiz_shutter') }}" class="btn btn-primary">Next Question</a>
+    </div>
+    <p id="result"></p>
+</div>
+{% endblock %}
