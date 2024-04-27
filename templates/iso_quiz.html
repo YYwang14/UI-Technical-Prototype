@@ -3,7 +3,7 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 <script src="{{ url_for('static', filename='js/iso.js') }}"></script>
-<h1>ISO Section Quiz</h1>
+<h1 style="margin-left: 20px;">ISO Section Quiz</h1>
 <div class="container">
     <div class="row">
         <!-- Image being matched on the left -->
@@ -22,10 +22,10 @@
     </div>
 
     <div class="slider-container">
-        <p>ISO Values</p>
-        <input type="range" min="0" max="4" step="1" class="slider" id="isoRange" style="width: 18%;">
+        <p style="margin-top: 30px;">ISO Values</p>
+        <input type="range" min="0" max="4" step="1" class="slider" id="isoRange" style="width: 25%; margin-top: -3%;">
         <!-- Display the values below the slider -->
-        <div class="slider-values">
+        <div class="slider-values bold">
             <span>1600-</span>
             <span>800-</span>
             <span>400-</span>
@@ -33,7 +33,7 @@
             <span>100</span>
         </div>
     </div>
-    <button id="submitBtn">Submit</button>
+    <button id="submitBtn" style="margin-top: 13px;">Submit</button>
     <p id="result"></p>
     <div class="text-center mt-4">
         <a href="{{ url_for('aperture_2') }}" class="btn btn-primary">Next Lesson</a>
