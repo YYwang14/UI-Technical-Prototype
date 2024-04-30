@@ -5,12 +5,12 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 <script src="{{ url_for('static', filename='js/quiz_iso.js') }}"></script>
 <div class="container text-center">
-    <h1>You're shooting a daytime nature scene and want to minimize digital noise. Which ISO setting should you choose?</h1>
+    <p>You're shooting a <strong>daytime</strong> nature scene and want to <strong>minimize</strong> digital noise. Which <strong>ISO</strong> setting should you choose?</p>
     <!-- Image directly below the question -->
-    <img id="isoImage" src="{{ url_for('static', filename='images/Quiz1_100.png') }}" style="width:100%; max-width: 600px;">
+    <img id="isoImage" src="{{ url_for('static', filename='images/Quiz1_100.png') }}" style="width:100%; max-width: 450px;">
     <!-- Slider directly below the image -->
     <div>
-        <input type="range" min="0" max="4" step="1" class="slider" id="isoSlider">
+        <input type="range" min="0" max="4" step="1" class="slider" id="isoSlider" style="width: 90%;">
         <!-- Labels directly below the slider -->
         <div class="slider-labels">
             <span>100</span>
