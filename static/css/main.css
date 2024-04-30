@@ -89,4 +89,13 @@
 .bold {
     font-weight: bold;
 }
-
+.draggables {
+    display: flex; /* Use flexbox to arrange items */
+}
+.draggable {
+    margin-right: 10px; /* Add some space between the elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
