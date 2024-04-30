@@ -103,5 +103,9 @@ def quiz_aperture():
 def quiz_camera():
     return render_template('quiz_camera.html')
 
+@app.route('/results')
+def results():
+    return render_template('results.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
