@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 <script src="{{ url_for('static', filename='js/quiz_shutter.js') }}"></script>
 <div class="container text-center">
-    <h1>You're photographing a session outdoors on a cloudy day, and you want to ensure a sharp, moderately lit picture. Which shutter speed setting should you choose?</h1>
+    <p>You're photographing a session <strong>outdoors</strong> on a <strong>cloudy day</strong>, and you want to ensure a sharp, <strong>moderately lit</strong> picture. Which <strong>shutter speed</strong> setting should you choose?</p>
     <img id="shutterImage" src="{{ url_for('static', filename='images/quiz2_60.png') }}" style="width:100%; max-width: 600px;">
     <div>
         <input type="range" min="0" max="5" step="1" class="slider" id="shutterSlider">
