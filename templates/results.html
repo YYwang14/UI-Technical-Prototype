@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Results Page{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<script src="{{ url_for('static', filename='js/quiz_aperture.js') }}"></script>
+<div class="container text-center">
+    <h1 style="margin-top: 100px; margin-bottom: 20px;">Done!</h1>
+    <p style="font-size: 20px;">You <strong>completed</strong> the final quiz! </p>
+    <p style="font-size: 20px;"> You can read about ISO, shutter speed, aperture again on out website, take the quiz once more
+    or start your photography journey outside!</p>
+    
+    
+    <a href="{{ url_for('quiz_iso') }}" class="btn btn-primary">Take Quiz</a>
+    <a href="{{ url_for('home') }}" class="btn btn-primary">Home Page</a>
+    <p id="result"></p>
+</div>
+{% endblock %}
