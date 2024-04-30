@@ -5,20 +5,23 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 <script src="{{ url_for('static', filename='js/quiz_camera.js') }}"></script>
 <div class="container text-center">
-    <h1>Find the ISO, Shutter Speed, and Aperture on the Camera!</h1>
-    <div class="camera-setup">
-        <img src="{{ url_for('static', filename='images/quiz4_camera.png') }}" alt="Camera" class="img-fluid">
-        <div class="drop-zone" id="shutterSpeedZone"></div>
-        <div class="drop-zone" id="apertureZone"></div>
-        <div class="drop-zone" id="isoZone"></div>
+
+    <p style="margin-top: 100px; font-size: 23px;">Find the ISO, Shutter Speed, and Aperture on the Camera!</p>
+    <div class="camera-setup" style="margin-bottom: 50px;width: 100%;">
+        <img src="{{ url_for('static', filename='images/quiz4_camera.png') }}" alt="Camera" class="img-fluid" style="width:100%; max-width: 600px;">
+        <div class="drop-zone" id="shutterSpeedZone" style="width: 17%; height: 20%; margin-left: 130px;"></div>
+        <div class="drop-zone" id="apertureZone" style="width: 17%; height: 20%; margin-left: 260px;"></div>
+        <div class="drop-zone" id="isoZone" style="width: 17%; height: 20%; margin-left: 285px;"></div>
     </div>
-    <div class="draggables">
-        <div draggable="true" id="shutterSpeed" class="draggable">Shutter Speed</div>
-        <div draggable="true" id="aperture" class="draggable">Aperture</div>
-        <div draggable="true" id="iso" class="draggable">ISO</div>
+    <div class="draggables" style="margin-left: 240px; margin-bottom: 50px;">
+        <div draggable="true" id="shutterSpeed" class="draggable" style="max-width: 100px;">Shutter Speed</div>
+        <div draggable="true" id="aperture" class="draggable" style="max-width: 100px;">Aperture</div>
+        <div draggable="true" id="iso" class="draggable" style="max-width: 100px;">ISO</div>
     </div>
     <button id="submit" class="btn btn-success">Submit</button>
     <button id="reset" class="btn btn-secondary">Reset</button>
-    <p id="result"></p>
+    <a href="{{ url_for('results') }}" class="btn btn-primary">End Quiz!</a>
+    
 </div>
+
 {% endblock %}
