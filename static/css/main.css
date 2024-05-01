@@ -97,5 +97,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
+}
+.drop-slot img {
+    width: 80%; /* Ensures the image takes full width of its container */
+    max-width: 90px; /* Decrease max-width to make images smaller */
+    height: auto; /* Keeps the aspect ratio intact */
+    display: block; /* Removes bottom space/gap under the image */
+    margin: auto; /* Centers the image within the column */
 }

@@ -18,10 +18,13 @@
         <div draggable="true" id="aperture" class="draggable" style="max-width: 100px;">Aperture</div>
         <div draggable="true" id="iso" class="draggable" style="max-width: 100px;">ISO</div>
     </div>
+    <p id="result" style="color: green; font-size: 20px;"></p> 
     <button id="submit" class="btn btn-success">Submit</button>
     <button id="reset" class="btn btn-secondary">Reset</button>
     <a href="{{ url_for('results') }}" class="btn btn-primary">End Quiz!</a>
-    
+
+
+
 </div>
 
 {% endblock %}
