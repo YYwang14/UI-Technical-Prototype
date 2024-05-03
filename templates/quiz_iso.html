@@ -4,8 +4,10 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 <script src="{{ url_for('static', filename='js/quiz_iso.js') }}"></script>
+<h1 style=" margin-left:25px; margin-top: 7px;">Question 1</h1>
 <div class="container text-center">
-    <p>You're shooting a <strong>daytime</strong> nature scene and want to <strong>minimize</strong> digital noise. Which <strong>ISO</strong> setting should you choose?</p>
+    
+    <p style="font-size: 20px;">You're shooting a <strong>daytime</strong> nature scene and want to <strong>minimize</strong> digital noise. Which <strong>ISO</strong> setting should you choose?</p>
     <!-- Image directly below the question -->
     <img id="isoImage" src="{{ url_for('static', filename='images/Quiz1_100.png') }}" style="width:100%; max-width: 450px;">
     <!-- Slider directly below the image -->
