@@ -106,3 +106,25 @@
     display: block; /* Removes bottom space/gap under the image */
     margin: auto; /* Centers the image within the column */
 }
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #007bff var(--slider-value), #ccc var(--slider-value)) !important; 
+    border-radius: 5px;
+    height: 8px;
+}
+
+/* Style the slider thumb/handle */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #007bff !important; /* Set thumb color to blue */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.title{
+    color: #5e5e5e;
+}
