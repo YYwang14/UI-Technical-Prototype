@@ -106,8 +106,13 @@
     display: block; /* Removes bottom space/gap under the image */
     margin: auto; /* Centers the image within the column */
 }
-
-
+.btn-success{
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-success:hover {
+    background-color: #006fe5;
+}
 input[type="range"]::-webkit-slider-runnable-track {
     background: linear-gradient(to right, #007bff var(--slider-value), #ccc var(--slider-value)) !important; 
     border-radius: 5px;
