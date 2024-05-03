@@ -21,17 +21,7 @@
             <p>When you double your ISO speed, you are doubling the brightness of the photo. So, a photo at ISO 400 will be twice brighter than ISO 200, which will be twice brighter than ISO 100.</p>
             <p><strong>Remember, you should always try to stick to the lowest ISO (base ISO) of your camera, which is typically ISO 100 or 200, whenever you can!</strong></p>
 
-            <div class="row mt-2">
-                <div class="col text-center">
-                    <a href="{{ url_for('iso2') }}" class="btn btn-secondary">Review ISO Lesson 2</a>
-                </div>
-                <div class="col text-center">
-                    <a href="{{ url_for('iso1') }}" class="btn btn-secondary">Review ISO Lesson 1</a>
-                </div>
-                <div class="col text-center">
-                    <a href="{{ url_for('iso_quiz') }}" class="btn btn-primary">Take me to the quiz</a>
-                </div>
-            </div>
+
         </div>
 
         <!-- Right column for images -->
@@ -39,6 +29,17 @@
             <img src="{{ url_for('static', filename='images/ISO3.png') }}" alt="ISO Examples" class="img-fluid">
         </div>
         
+    </div>
+    <div class="row mt-2">
+        <div class="col text-center">
+            <a href="{{ url_for('iso1') }}" class="btn btn-secondary">Part 1</a>
+        </div>
+        <div class="col text-center">
+            <a href="{{ url_for('iso2') }}" class="btn btn-secondary">Part 2</a>
+        </div>
+        <div class="col text-center">
+            <a href="{{ url_for('iso_quiz') }}" class="btn btn-primary">Take the quiz</a>
+        </div>
     </div>
 </div>
 {% endblock %}
