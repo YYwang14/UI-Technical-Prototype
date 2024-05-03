@@ -22,3 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.getElementById('isoRange').addEventListener('input', function() {
+    // Get the slider value
+    var sliderValue = this.value;
+
+    // Set the value of the CSS variable '--slider-value' to the slider value
+    this.style.setProperty('--slider-value', sliderValue * 25 + '%');
+});
