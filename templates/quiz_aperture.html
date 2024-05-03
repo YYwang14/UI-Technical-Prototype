@@ -4,8 +4,9 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 <script src="{{ url_for('static', filename='js/quiz_aperture.js') }}"></script>
+<h1 style=" margin-left:25px; margin-top: 7px;">Question 3</h1>
 <div class="container text-center">
-    <p>You're photographing a portrait session <strong>outdoors</strong> on a <strong>sunny day</strong>, and you want to ensure a <strong>sharp focus</strong> on your subject while maintaining a <strong>blurred background</strong>. Which <strong>aperture</strong> setting should you choose?</p>
+    <p style="font-size: 20px;">You're photographing a portrait session <strong>outdoors</strong> on a <strong>sunny day</strong>, and you want to ensure a <strong>sharp focus</strong> on your subject while maintaining a <strong>blurred background</strong>. Which <strong>aperture</strong> setting should you choose?</p>
     <img id="apertureImage" src="{{ url_for('static', filename='images/quiz3_1.png') }}" style="width:100%; max-width: 450px;">
     <div>
         <input type="range" min="0" max="5" step="1" class="slider" id="apertureSlider" style="max-width: 415px;">
