@@ -107,11 +107,13 @@
     margin: auto; /* Centers the image within the column */
 }
 .btn-success{
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
 }
-.btn-success:hover {
-    background-color: #006fe5;
+.btn-success:hover,
+.btn-success:focus {
+    background-color: #006fe5 !important;
+    border-color: #007bff !important;
 }
 input[type="range"]::-webkit-slider-runnable-track {
     background: linear-gradient(to right, #007bff var(--slider-value), #ccc var(--slider-value)) !important; 
