@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (dynamicSrc === randomSrc) {
             result.textContent = 'Correct!';
-            resultDisplay.style.color = 'green';
+            result.style.color = 'green';  // Changed from resultDisplay to result
 
         } else {
             result.textContent = 'Incorrect :(';
-            resultDisplay.style.color = 'red';
+            result.style.color = 'red';  // Changed from resultDisplay to result
 
         }
     });
