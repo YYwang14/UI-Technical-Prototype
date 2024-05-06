@@ -16,9 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isoSlider.value === '0') {
             resultDisplay.textContent = 'Correct!';
             resultDisplay.style.color = 'green';
+            localStorage.setItem('quiz_iso', '1');
         } else {
             resultDisplay.textContent = 'Incorrect :(';
             resultDisplay.style.color = 'red';
+            localStorage.setItem('quiz_iso', '0');
+
         }
     });
 });

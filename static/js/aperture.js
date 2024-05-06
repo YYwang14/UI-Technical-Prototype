@@ -25,8 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (selectedImageSrc === randomImageSrc) {
             resultDisplay.textContent = 'Correct!';
+            resultDisplay.style.color = 'green'; 
         } else {
             resultDisplay.textContent = 'Incorrect :(';
+            resultDisplay.style.color = 'red';
+
         }
     });
 });

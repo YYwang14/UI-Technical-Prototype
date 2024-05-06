@@ -16,9 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (apertureSlider.value === '0') {  // Assuming f/1.4 is the correct answer at index 0
             resultDisplay.textContent = 'Correct!';
             resultDisplay.style.color = 'green';
+            localStorage.setItem('quiz_aperture', '1');
+
         } else {
             resultDisplay.textContent = 'Incorrect :(';
             resultDisplay.style.color = 'red';
+            localStorage.setItem('quiz_aperture', '0');
+
         }
     });
 });

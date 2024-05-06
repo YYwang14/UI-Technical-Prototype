@@ -33,9 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (correct === 3) {
             resultDisplay.textContent = 'Correct!';
             resultDisplay.style.color = 'green';
+            localStorage.setItem('quiz_camera', '1');
+
         } else {
             resultDisplay.textContent = 'Incorrect :(';
             resultDisplay.style.color = 'red';
+            localStorage.setItem('quiz_camera', '0');
         }
     });
 

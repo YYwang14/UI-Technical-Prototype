@@ -16,9 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (shutterSlider.value === '1') {  // Assuming 1/125 is the correct answer at index 1
             resultDisplay.textContent = 'Correct!';
             resultDisplay.style.color = 'green';
+            localStorage.setItem('quiz_shutter', '1');
+
         } else {
             resultDisplay.textContent = 'Incorrect :(';
             resultDisplay.style.color = 'red';
+            localStorage.setItem('quiz_shutter', '0');
         }
     });
 });
